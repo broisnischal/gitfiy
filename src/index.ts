@@ -15,7 +15,7 @@ const execFileAsync = promisify(execFile);
 const DEFAULT_MAX_TEXT_SIZE = 200_000;
 const DEFAULT_MAX_ENTRIES = 200;
 const DEFAULT_MAX_COMMITS = 30;
-const CACHE_DIR = process.env.REPIX_CACHE_DIR ?? join(homedir(), ".cache", "repix");
+const CACHE_DIR = process.env.GITFIY_CACHE_DIR ?? join(homedir(), ".cache", "gitfiy");
 
 type RepoResolution = {
   repoRoot: string;
@@ -99,7 +99,7 @@ function topEntries<K>(entries: Map<K, number>, limit: number): Array<{ key: K; 
 }
 
 const server = new McpServer({
-  name: "repix",
+  name: "gitfiy",
   version: "0.1.0",
 });
 
@@ -441,7 +441,7 @@ server.registerTool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("repix server running on stdio");
+  console.error("gitfiy server running on stdio");
 }
 
 main().catch((error: unknown) => {

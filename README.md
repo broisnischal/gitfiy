@@ -1,6 +1,6 @@
-# repix
+# gitfiy
 
-`repix` is a minimal Model Context Protocol (MCP) server for repository exploration and learning team patterns from real git history.
+`gitfiy` is a minimal Model Context Protocol (MCP) server for repository exploration and learning team patterns from real git history.
 
 It can:
 - clone/cache a GitHub repository URL
@@ -46,13 +46,13 @@ bun run dev
 After publishing:
 
 ```bash
-npx repix
+npx gitfiy
 ```
 
 Before publishing, run from this project:
 
 ```bash
-npx repix@file:.
+npx gitfiy@file:.
 ```
 
 or directly:
@@ -68,9 +68,9 @@ bun dist/index.mjs
 ```json
 {
   "mcpServers": {
-    "repix-local": {
+    "gitfiy-local": {
       "command": "bun",
-      "args": ["/absolute/path/to/repix/dist/index.mjs"]
+      "args": ["/absolute/path/to/gitfiy/dist/index.mjs"]
     }
   }
 }
@@ -81,9 +81,9 @@ bun dist/index.mjs
 ```json
 {
   "mcpServers": {
-    "repix": {
+    "gitfiy": {
       "command": "npx",
-      "args": ["-y", "repix"]
+      "args": ["-y", "gitfiy"]
     }
   }
 }
@@ -114,7 +114,7 @@ bun dist/index.mjs
 
 ## Notes
 
-- GitHub URL repos are cloned locally into `~/.cache/repix`.
+- GitHub URL repos are cloned locally into `~/.cache/gitfiy`.
 - Local path repos are used in-place (must already be a git repo).
 - Use `sync: true` in `resolve_repo` to fetch latest remote updates.
 - This project is Bun-first for local runtime and development.
@@ -131,6 +131,6 @@ bun run changeset
 ```
 
 Required GitHub repository setup:
-- Create repo: `https://github.com/nees/repix`
+- Create repo: `https://github.com/nees/gitfiy`
 - Add repository secret: `NPM_TOKEN` (npm automation token with publish access)
 - Keep default `GITHUB_TOKEN` enabled for Actions

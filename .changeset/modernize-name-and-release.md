@@ -1,5 +1,5 @@
 ---
-"repix": minor
+"gitfiy": minor
 ---
 
 changes minor

@@ -1,5 +1,5 @@
 {
-  "name": "repix",
+  "name": "gitfiy",
   "version": "0.1.0",
   "description": "Minimal MCP server to explore repositories, commits, diffs, and development patterns.",
   "license": "MIT",
@@ -7,15 +7,15 @@
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
-    "repix": "dist/index.mjs"
+    "gitfiy": "dist/index.mjs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nees/repix.git"
+    "url": "git+https://github.com/nees/gitfiy.git"
   },
-  "homepage": "https://github.com/nees/repix#readme",
+  "homepage": "https://github.com/nees/gitfiy#readme",
   "bugs": {
-    "url": "https://github.com/nees/repix/issues"
+    "url": "https://github.com/nees/gitfiy/issues"
   },
   "author": "nees",
   "files": [
